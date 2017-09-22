@@ -7,16 +7,16 @@ use Acme\Market\Orders\CreateOrder\CreateOrderRequest;
 
 class CreateOrderRequestTest extends TestCase
 {
-	function testRequestFields()
-	{
-		$request = new CreateOrderRequest(
-			$productId = uniqid(),
-			$customerId = uniqid(),
-			$quantity = 1
-		);
+    function testRequestFields()
+    {
+        $request = new CreateOrderRequest(
+            $productId = uniqid(),
+            $customerId = uniqid(),
+            $quantity = 1
+        );
 
-		$this->assertEquals($productId, $request->getProductId());
-		$this->assertEquals($customerId, $request->getCustomerId());
-		$this->assertEquals($quantity, $request->getQuantity());
-	}
+        $this->assertEquals($productId, $request->getProductId());
+        $this->assertEquals($customerId, $request->getCustomerId());
+        $this->assertEquals($quantity, $request->getQuantity());
+    }
 }
