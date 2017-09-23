@@ -30,7 +30,13 @@ $product = $response->getProduct();
 <?php if ($response->isFound()) : ?>
     <h1>Product <?=$id;?></h1>
     <p><?=$product->stock();?> in stock.</p>
-    <a href="order.php?id=<?=$id;?>">Order</a>
+    <form method="POST" action="order.php">
+        <input type="hidden" name="productId" value="<?=$product->id()?>">
+        <input type="text" name="quantity" value="1">
+        <button type="submit">
+            Order
+        </button>
+    </form>
 <?php else: ?>
     <p>Product not found.</p>
 <?php endif; ?>
