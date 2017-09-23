@@ -1,0 +1,9 @@
+language: php
+php:
+- 7.0
+before_script:
+  - composer self-update
+  - composer install --prefer-source --no-interaction --dev
+script:
+  - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+  - CODECLIMATE_REPO_TOKEN=492b7debf8018409378a6657367bd10473516914f9e5b54e7fb884d4e7442ae3 ./vendor/bin/test-reporter
