@@ -9,3 +9,9 @@ This repository is featured in my article on Medium:
 
 [https://medium.com/@krzysztofengineer/clean-architecture-in-php-part-1-domain-layer-4b5772c056](https://medium.com/@krzysztofengineer/clean-architecture-in-php-part-1-domain-layer-4b5772c056)
 
+## Implementations
+
+### Custom PHP
+
+To boot this solution go into `/web/custom` and run `php -S localhost:8080`.
+Now you can run this url in your browser and click through the sample html.
