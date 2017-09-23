@@ -17,6 +17,6 @@ class CreateOrderResponseTest extends TestCase
 
         $this->assertEquals($created, $response->isCreated());
         $this->assertEquals($orderId, $response->getOrderId());
-        $this->assertEquals($quantityInStock, $response->getQuantityInStock());
+        $this->assertEquals($quantityInStock, $response->isQuantityInStock());
     }
 }

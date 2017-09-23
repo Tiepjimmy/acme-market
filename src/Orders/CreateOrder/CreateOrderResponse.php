@@ -30,7 +30,7 @@ class CreateOrderResponse
         $this->orderId = $orderId;
     }
 
-    public function getQuantityInStock()
+    public function isQuantityInStock()
     {
         return $this->quantityInStock;
     }

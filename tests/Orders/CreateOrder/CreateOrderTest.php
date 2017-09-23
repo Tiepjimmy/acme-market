@@ -47,7 +47,7 @@ class CreateOrderTest extends TestCase
         $this->assertInstanceOf(CreateOrderResponse::class, $response);
         $this->assertEquals(false, $response->isCreated());
         $this->assertEquals(null, $response->getOrderId());
-        $this->assertEquals(false, $response->getQuantityInStock());
+        $this->assertEquals(false, $response->isQuantityInStock());
     }
 
     function testWhenQuantityIsTooLow()
@@ -76,7 +76,7 @@ class CreateOrderTest extends TestCase
         $this->assertInstanceOf(CreateOrderResponse::class, $response);
         $this->assertEquals(false, $response->isCreated());
         $this->assertEquals(null, $response->getOrderId());
-        $this->assertEquals(false, $response->getQuantityInStock());
+        $this->assertEquals(false, $response->isQuantityInStock());
     }
 
     function testOrderIsCreated()
@@ -115,6 +115,6 @@ class CreateOrderTest extends TestCase
         $this->assertInstanceOf(CreateOrderResponse::class, $response);
         $this->assertEquals(true, $response->isCreated());
         $this->assertEquals($orderId, $response->getOrderId());
-        $this->assertEquals(true, $response->getQuantityInStock());
+        $this->assertEquals(true, $response->isQuantityInStock());
     }
 }
